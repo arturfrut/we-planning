@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/we-planning-client/node_modules
+/we-planning-server/node_modules 
+/we-planning-client/.pnp
+/we-planning-client/.pnp.js
+/we-planning-sever/.pnp
+/we-planning-server/.pnp.js
+
+/.pnp
+.pnp.js
+
+#misc
+
+/we-planning-client/npm-debug.log*
+/we-planning-client/yarn-debug.log*
+/we-planning-client/yarn-error.log*
+
+
+/we-planning-server/npm-debug.log*
+/we-planning-server/yarn-debug.log*
+/we-planning-server/yarn-error.log*
