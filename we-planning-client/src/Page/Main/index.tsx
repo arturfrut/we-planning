@@ -1,11 +1,11 @@
-import CreateNewStory from "../../Components/PopUps/CreateNewStory";
+import StoriesState from "../../Components/StoriesState";
 
 
 const Main = () => {
     return (
         <>
         {/* <Chat nombre={"Artu"} /> */}
-            <CreateNewStory/>
+            <StoriesState />
             <h1>I'm the Main page</h1>
         </>
     );

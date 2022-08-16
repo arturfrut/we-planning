@@ -6,6 +6,7 @@ const CreateNewStory = () => {
     const { state, dispatch }: any = useContext(CONTEXT);
     const [textArea, setTextArea] = useState("");
 
+
     const handleSubmit = e => {
         e.preventDefault();
         const splitLines = textArea.split("\n").filter(Boolean);
