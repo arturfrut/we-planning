@@ -63,7 +63,7 @@ interface PositionContainerInterface {
 }
 
 export const PositionContainer = styled.div<PositionContainerInterface>`
-background-color: green;
+    background-color: green;
     display: flex;
     justify-content: ${props => props.justifyContent};
     height: ${props => props.height};
@@ -72,5 +72,25 @@ background-color: green;
     margin: ${props => props.margin};
     padding: ${props => props.padding};
     ${props => props.styleString};
-    
+`;
+
+export interface TextInterface {
+    styleString?: string;
+    fontSize?: string;
+    color?: string;
+    bgColor?: string;
+    margin?: string;
+    padding?: string;
+    fontWeight?: string;
+    text?:string;
+    onClick?: () => void;
+}
+
+export const TextStyled = styled.p<TextInterface>`
+    font-weight: ${props => props.fontWeight};
+    color: ${props => props.color};
+    background-color: ${props => props.bgColor};
+    margin: ${props => props.margin};
+    padding: ${props => props.padding};
+    ${props => props.styleString};
 `;

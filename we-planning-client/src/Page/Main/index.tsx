@@ -1,8 +1,6 @@
-import AdminPanel from "../../Components/AdminPanel";
 import RoomTitle from "../../Components/RoomTitle";
 import StoriesState from "../../Components/StoriesState";
 import TokenBoard from "../../Components/TokenBoard";
-import { TOKEN } from "../../Constants";
 import { MainContainer, GridColumn } from "../../Styles/mainStyles";
 import Header from "../Header";
 

@@ -5,7 +5,7 @@ import { RoomNameContainer } from "../../Styles/roomTitleStyle";
 const RoomTitle = () => {
     const { state }: any = useContext(CONTEXT);
     const roomTitle =
-        state.roomTitle || `${state.serverName} room` || "No name room";
+        state.roomConfig.roomTitle || `${state.serverName} room` ;
     return (
         <>
             <RoomNameContainer>

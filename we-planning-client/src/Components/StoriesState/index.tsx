@@ -1,38 +1,40 @@
 import { useContext, useState } from "react";
 import { CONTEXT } from "../../App/context";
+import { StoriesStateContainer } from "../../Styles/storiesStateStyles";
+import BadgeCRUD from "./BadgeCRUD";
+import StoriesCounter from "./StoriesCounter";
 
 const StoriesState = () => {
     const { state }: any = useContext(CONTEXT);
-    const { headerRowData, stories } = state;
+    const { stories } = state;
+
+    const storiesCounters = {
+        actives: stories.filter(story => story.status === "active").length,
+        completed: stories.filter(story => story.status === "complete").length,
+        all: stories.length
+    };
+    const sayClick =()=> console.log('click')
+
     return (
-        <div className="Container">
-            <h1>Stories State</h1>
+        <StoriesStateContainer>
+            
             <div className="firstRowContainer">
                 <div className="storyStatusHeaderRow">
-                    {/* {headerRowData.map((element, i) => (
-                        <>
-                            <h1>123123</h1>
-                            <div></div>
-                        </>
-                    ))} */}
-                    <div className="storyCRUDHeaderRow">
-                        <div>
-                            <p>+</p>
-                            <p>New</p>
-                        </div>
-                        <div>
-                            <p>*</p>
-                            <p>Edit</p>
-                        </div>
-                    </div>
+                    <StoriesCounter title="Active Stories" number={storiesCounters.actives}/>
+                    <StoriesCounter title="Active Completed" number={storiesCounters.completed}/>
+                    <StoriesCounter title="All Stories" number={storiesCounters.all}/>
                 </div>
+                    <div className="storyCRUDHeaderRow">
+                    <BadgeCRUD imgSrc={undefined} title={'New'} handleClick={sayClick} />
+                    <BadgeCRUD imgSrc={undefined} title={'Edit'} handleClick={sayClick} />
+                    </div>
             </div>
             <div className="table">
-                {/* {stories.map((element, i) => (
-                    <h1>Hola</h1>
-                ))} */}
+                {stories.map((story, i) => (
+                    <h1 key={i}>{story.title}</h1>
+                ))} 
             </div>
-        </div>
+        </StoriesStateContainer>
     );
 };
 

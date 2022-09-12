@@ -6,10 +6,10 @@ export const store = {
     storyDetails: null,
     activeStoryDetails: false,
     roomConfig: {
-        tokenSelected: 'FIBONACCI'
+        tokenSelected: 'FIBONACCI',
+        roomName: null || 'noNameRoom',
     },
     popUps: null,
-    // headerRowData: headerRowData,
     stories: [
         {
             title: "Historia de ejemplo 1",

@@ -5,7 +5,7 @@ import { OPEN_CLOSE_POP_UPS, SET_ROOM_CONFIG } from "../../Core/Types";
 
 const CreateNewRoom = () => {
     const newRoomInitialState = {
-        roomName: "NewRoom",
+        roomName: "No name room",
         tokenType: "cards",
         optionCheck: false
     };
