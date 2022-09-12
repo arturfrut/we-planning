@@ -5,7 +5,7 @@ import Main from "../Page/Main";
 
 const Router = () => {
     return (
-        <div style={{paddingLeft: "1rem"}}>
+        <div>
             <BrowserRouter>
                 <Switch>
                     <Route path={URLS.home} element={<Main />} />

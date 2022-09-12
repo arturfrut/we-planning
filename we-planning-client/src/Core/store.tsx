@@ -1,11 +1,13 @@
-import headerRowData from "../Constants/initialStates";
+// import headerRowData from "../Constants/initialStates";
 
 export const store = {
+    profileName: 'Artur',
+    serverName: 'Artu',
     storyDetails: null,
     activeStoryDetails: false,
     roomConfig: null,
     popUps: null,
-    headerRowData: headerRowData,
+    // headerRowData: headerRowData,
     stories: [
         {
             title: "Historia de ejemplo 1",

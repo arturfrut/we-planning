@@ -6,15 +6,18 @@ const CreateNewStory = () => {
     const { state, dispatch }: any = useContext(CONTEXT);
     const [textArea, setTextArea] = useState("");
 
-
     const handleSubmit = e => {
         e.preventDefault();
         const splitLines = textArea.split("\n").filter(Boolean);
-        console.log(state.stories)
-        // dispatch({
-        //     type:SET_STORIES,
-        //     value: splitLines
-        // })
+        console.log(state.stories);
+        dispatch({
+            type: SET_STORIES,
+            value: {
+                title: splitLines,
+                detail: "null",
+                status: "active"
+            }
+        });
     };
 
     const handleTextArea = e => setTextArea(e.target.value);
@@ -23,10 +26,14 @@ const CreateNewStory = () => {
         console.log(textArea);
         const splitLines = textArea.split("\n").filter(Boolean);
         console.log(splitLines);
-        // dispatch({
-        //     type:SET_STORIES,
-        //     value:splitLines
-        // })
+        dispatch({
+            type: SET_STORIES,
+            value: {
+                title: splitLines,
+                detail: "null",
+                status: "active"
+            }
+        });
         setTextArea("");
     };
 

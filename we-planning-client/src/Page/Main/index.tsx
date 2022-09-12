@@ -1,12 +1,21 @@
-import StoriesState from "../../Components/StoriesState";
-
+import AdminPanel from "../../Components/AdminPanel";
+import RoomTitle from "../../Components/RoomTitle";
+import { MainContainer, GridColumn } from "../../Styles/mainStyles";
+import Header from "../Header";
 
 const Main = () => {
     return (
         <>
-        {/* <Chat nombre={"Artu"} /> */}
-            <StoriesState />
-            <h1>I'm the Main page</h1>
+            <Header />
+            <MainContainer>
+                <RoomTitle />
+                <GridColumn>
+                    <h1>left column</h1>
+                </GridColumn>
+                <GridColumn>
+                    <h1>rigth column</h1>
+                </GridColumn>
+            </MainContainer>
         </>
     );
 };

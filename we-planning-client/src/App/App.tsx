@@ -3,7 +3,8 @@ import Provider from "./context";
 import Router from "./Router";
 import { store } from "../Core/store";
 import { wdcReducer } from "../Core/Reducer/wdcReducer";
-import { Col, Container } from "../Common/Grid";
+import { Col } from "../Common/Grid";
+import GeneralContainer from "../Styles/generalContainer";
 
 
 
@@ -14,13 +15,11 @@ const App: FunctionComponent = () => {
     return (
         <Provider value={{ dispatch, state }}>
             <>
-                    <Container>
-                        <Col size={11} styleString="min-height: 100vh;">
+                    <GeneralContainer>
                             {useMemo(() => {
                                 return <Router />;
                             }, [])}
-                        </Col>
-                    </Container>
+                    </GeneralContainer>
             </>
         </Provider>
     );

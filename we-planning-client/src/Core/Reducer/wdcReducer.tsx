@@ -36,7 +36,7 @@ export const wdcReducer = (state: any, action: any): any => {
         case SET_STORIES:
             return {
                 ...state,
-                stories: [...state.stories, ...action.value]
+                stories: [...state.stories, action.value]
             };
 
         case OPEN_CLOSE_POP_UPS:

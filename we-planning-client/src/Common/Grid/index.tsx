@@ -35,3 +35,42 @@ export const Col: FunctionComponent<ColInterface> = styled("div")<{
     ${props => props.styleString};
     ${props => props.active};
 `;
+
+interface ImageInterface {
+    styleString?: string;
+    height?: string;
+    width?: string;
+    margin?: string;
+    padding?: string;
+}
+
+export const Image = styled.img<ImageInterface>`
+    height: ${props => props.height};
+    width: ${props => props.height};
+    margin: ${props => props.margin};
+    padding: ${props => props.padding};
+    ${props => props.styleString}
+`;
+
+interface PositionContainerInterface {
+    styleString?: string;
+    height?: string;
+    width?: string;
+    margin?: string;
+    padding?: string;
+    justifyContent?: string;
+    maxWidth?: string;
+}
+
+export const PositionContainer = styled.div<PositionContainerInterface>`
+background-color: green;
+    display: flex;
+    justify-content: ${props => props.justifyContent};
+    height: ${props => props.height};
+    width: ${props => props.height};
+    max-width: ${props => props.maxWidth};
+    margin: ${props => props.margin};
+    padding: ${props => props.padding};
+    ${props => props.styleString};
+    
+`;
