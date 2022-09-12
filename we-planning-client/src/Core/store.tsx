@@ -5,7 +5,9 @@ export const store = {
     serverName: 'Artu',
     storyDetails: null,
     activeStoryDetails: false,
-    roomConfig: null,
+    roomConfig: {
+        tokenSelected: 'FIBONACCI'
+    },
     popUps: null,
     // headerRowData: headerRowData,
     stories: [

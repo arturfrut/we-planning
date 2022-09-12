@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 export const TokenBoardContainer = styled.div`
-margin: 1rem 0;
-  grid-column: 1 / 3;
-  font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
 `;
 
-export const TokenContainer = styled.div`
-margin: 1rem 0;
-  grid-column: 1 / 3;
-  font-size: 2rem;
+export interface TokenInterface {
+    bgColor: "string";
+}
+
+export const TokenCard = styled("div")<TokenInterface>`
+display: flex;
+justify-content: center;
+align-items: center;
+    width: 19%;
+    height: 4rem;
+    border: 1px solid blue;
+    background-color:${props => props.bgColor}
 `;

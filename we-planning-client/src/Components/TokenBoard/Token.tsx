@@ -1,7 +1,10 @@
-const Token = (tokenStyle, tokenProp) => (
-    <div className={tokenStyle}>
-        <h1 className={`${tokenStyle},${tokenProp.color}`}>{tokenProp.value}</h1>
-    </div>
-)
+import { TokenCard } from "../../Styles/tokenBoardStyle";
 
-export default Token
+const Token = ({ tokenValue, tokenColor }) => {
+    console.log('SOY TOKEN',tokenValue,tokenColor);
+    return (
+        <TokenCard bgColor={tokenColor}>{tokenValue}</TokenCard>
+    );
+};
+
+export default Token;
