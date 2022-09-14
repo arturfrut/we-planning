@@ -82,7 +82,7 @@ export interface TextInterface {
     margin?: string;
     padding?: string;
     fontWeight?: string;
-    text?:string;
+    text?: string;
     onClick?: () => void;
 }
 
@@ -94,3 +94,24 @@ export const TextStyled = styled.p<TextInterface>`
     padding: ${props => props.padding};
     ${props => props.styleString};
 `;
+
+export interface FlexDivInterface {
+    styleString?: string;
+    margin?: string;
+    padding?: string;
+    flexDirection?:string;
+    justifyContent?:string;
+    alignItems?:string;
+}
+
+export const FlexDiv = styled.div<FlexDivInterface>`
+    display: flex;
+    align-items: ${props => props.alignItems};
+    flex-direction: ${props => props.flexDirection};
+    justify-content: ${props => props.justifyContent};
+    margin: ${props => props.margin};
+    padding: ${props => props.padding};
+    ${props => props.styleString};
+`;
+
+

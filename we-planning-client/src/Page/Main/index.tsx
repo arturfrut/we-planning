@@ -1,3 +1,4 @@
+import AdminPanel from "../../Components/AdminPanel";
 import RoomTitle from "../../Components/RoomTitle";
 import StoriesState from "../../Components/StoriesState";
 import TokenBoard from "../../Components/TokenBoard";
@@ -15,7 +16,7 @@ const Main = () => {
                     <StoriesState/>
                 </GridColumn>
                 <GridColumn>
-                    <h1>rigth column</h1>
+                    <AdminPanel/>
                 </GridColumn>
             </MainContainer>
         </>

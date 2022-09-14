@@ -1,10 +1,12 @@
 import Text from "../../Common/Text/Text";
 import { StoryContainer } from "../../Styles/storiesStateStyles";
 
-const Story = () => (
-    <StoryContainer>
-        <Text />
-    </StoryContainer>
-);
+const Story = ( {text} ) => {
+    return (
+        <StoryContainer>
+            <Text text={text}/>
+        </StoryContainer>
+    );
+};
 
 export default Story;

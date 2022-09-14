@@ -1,12 +1,13 @@
 import Text from "../../Common/Text/Text";
-import { StoriesCounterCircle } from "../../Styles/storiesStateStyles";
+import { StoriesCounterCircle, StoryCounterContainer } from "../../Styles/storiesStateStyles";
 
-const StoriesCounter = ({ title, number }) => {
+const StoriesCounter = ({ title, number, handleClick }) => {
+
     return (
-        <div className="storyCounterContainer">
-            <Text text={title} />{" "}
+        <StoryCounterContainer onClick={handleClick}>
+            <Text text={title} />
             <StoriesCounterCircle>{number}</StoriesCounterCircle>
-        </div>
+        </StoryCounterContainer>
     );
 };
 

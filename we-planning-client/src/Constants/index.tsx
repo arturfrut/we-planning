@@ -18,7 +18,6 @@ export const TOKEN = {
         { value: "coffee", color: null }
     ],
     T_SHIRTS: [
-        { value: "1", color: "red" },
         { value: "XS", color: "blue" },
         { value: "S", color: "red" },
         { value: "M", color: "red" },
@@ -29,9 +28,6 @@ export const TOKEN = {
     ]
 };
 
-export const API_KEY_WDC = "";
-
-export const API_KEY_FWA = "";
 
 export const COLORS = {
     ALERT_DANGER: "#B7202E"
