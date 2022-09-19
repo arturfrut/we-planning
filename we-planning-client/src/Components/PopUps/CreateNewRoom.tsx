@@ -34,7 +34,7 @@ const CreateNewRoom = () => {
     };
 
     return (
-        <div className="Container">
+        <>
             <div className="HeaderContainer">{STRINGS.CREATE_NEW_ROOM}</div>
             <form onSubmit={handleSubmit}>
                 <input
@@ -63,7 +63,7 @@ const CreateNewRoom = () => {
                 <button type="submit">SUBMIT</button>
                 <button>CANCEL</button>
             </form>
-        </div>
+        </>
     );
 };
 

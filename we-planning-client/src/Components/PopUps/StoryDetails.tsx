@@ -31,7 +31,7 @@ const StoryDetails = ({ storyTitle, storydDetail }) => {
         });
     };
     return (
-        <div>
+        <>
             <div className="popUpHeader">{STRINGS.STORY_DETAILS}</div>
             <div className="bottomContainer">
                 <div className="FirstLine">
@@ -46,7 +46,7 @@ const StoryDetails = ({ storyTitle, storydDetail }) => {
                     <button onClick={closeWindow}>{STRINGS.CLOSE}</button>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

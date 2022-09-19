@@ -44,7 +44,7 @@ const CreateNewStory = () => {
         });
 
     return (
-        <div className="Container">
+        <>
             <div className="HeaderContainer">Create New Story</div>
             <form onSubmit={handleSubmit}>
                 <textarea
@@ -57,7 +57,7 @@ const CreateNewStory = () => {
                 <button onClick={handleSaveAdd}>Save and Add New</button>
                 <button onClick={closePopUp}>CLOSE</button>
             </form>
-        </div>
+        </>
     );
 };
 

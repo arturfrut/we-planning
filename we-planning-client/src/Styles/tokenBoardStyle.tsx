@@ -13,9 +13,13 @@ export interface TokenInterface {
 export const TokenCard = styled("div")<TokenInterface>`
 display: flex;
 justify-content: center;
+cursor: pointer;
 align-items: center;
     width: 19%;
     height: 4rem;
     border: 1px solid blue;
-    background-color:${props => props.bgColor}
+    background-color:${props => props.bgColor};
+    &:hover{
+        background-color:green;
+    }
 `;
