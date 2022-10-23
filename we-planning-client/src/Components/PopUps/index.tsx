@@ -4,6 +4,7 @@ import {
     PopUpContent,
     PopUpTitle
 } from "../../Styles/PopUps";
+import CreateNewStory from "./CreateNewStory";
 
 const PopUps = ({ popUpSelector }) => {
     return (
@@ -18,7 +19,7 @@ const PopUps = ({ popUpSelector }) => {
                 </PopUpTitle>
                 <PopUpContent>
                     {popUpSelector === "NewStoryOpen"
-                        ? "Create New Story"
+                        ? <CreateNewStory/>
                         : popUpSelector === "StoryDetailsOpen"
                         ? "Story Details Open"
                         : "Create New Room"}

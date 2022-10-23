@@ -12,5 +12,4 @@ export const MainContainer = styled.div`
 export const GridColumn = styled.div`
     display: flex;
     flex-direction: column;
-
 `;

@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { CONTEXT } from "../../App/context";
+import { ButtonStyled, FormStyled } from "../../Common/Grid";
 import { OPEN_CLOSE_POP_UPS, SET_STORIES } from "../../Core/Types";
+import { TextArea } from "../../Styles/PopUps";
 
 const CreateNewStory = () => {
     const { state, dispatch }: any = useContext(CONTEXT);
@@ -44,20 +46,17 @@ const CreateNewStory = () => {
         });
 
     return (
-        <>
-            <div className="HeaderContainer">Create New Story</div>
-            <form onSubmit={handleSubmit}>
-                <textarea
+            <FormStyled onSubmit={handleSubmit}>
+                <TextArea
                     name="textArea"
                     value={textArea}
                     onChange={handleTextArea}
                     placeholder="Put your story here, each line is a new story"
                 />
-                <button type="submit">Save and Close</button>
-                <button onClick={handleSaveAdd}>Save and Add New</button>
-                <button onClick={closePopUp}>CLOSE</button>
-            </form>
-        </>
+                <ButtonStyled type="submit">Save and Close</ButtonStyled>
+                <ButtonStyled onClick={handleSaveAdd}>Save and Add New</ButtonStyled>
+                <ButtonStyled onClick={closePopUp}>CLOSE</ButtonStyled>
+            </FormStyled>
     );
 };
 

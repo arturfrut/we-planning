@@ -114,4 +114,24 @@ export const FlexDiv = styled.div<FlexDivInterface>`
     ${props => props.styleString};
 `;
 
+export const FormStyled = styled.form`
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+`;
 
+interface StyledButtonInterface {
+    width?:string;
+    styleString?: string;
+    typeColor?:string;
+    margin?:string;
+    padding?:string;
+}
+
+export const ButtonStyled = styled.button<StyledButtonInterface>`
+    width:${props => props.width};
+    margin: ${props => props.margin};
+    padding: ${props => props.padding};
+    ${props => props.styleString};
+`;
